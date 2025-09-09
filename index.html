@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Wants to Be a Millionaire?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>WHO WANTS TO BE A MILLIONAIRE?</h1>
+            <div class="score">
+                <span>Question: <span id="questionNumber">1</span>/30</span>
+                <span>Score: $<span id="currentScore">0</span></span>
+            </div>
+        </header>
+
+        <main>
+            <div id="gameScreen" class="game-screen active">
+                <div class="question-container">
+                    <h2 id="questionText">Loading question...</h2>
+                </div>
+
+                <div class="answers-container">
+                    <button class="answer-btn" id="answerA" data-answer="a">
+                        <span class="answer-letter">A)</span>
+                        <span class="answer-text">Answer A</span>
+                    </button>
+                    <button class="answer-btn" id="answerB" data-answer="b">
+                        <span class="answer-letter">B)</span>
+                        <span class="answer-text">Answer B</span>
+                    </button>
+                    <button class="answer-btn" id="answerC" data-answer="c">
+                        <span class="answer-letter">C)</span>
+                        <span class="answer-text">Answer C</span>
+                    </button>
+                    <button class="answer-btn" id="answerD" data-answer="d">
+                        <span class="answer-letter">D)</span>
+                        <span class="answer-text">Answer D</span>
+                    </button>
+                </div>
+
+                <div class="game-controls">
+                    <button id="nextBtn" class="control-btn" style="display: none;">Next Question</button>
+                </div>
+            </div>
+
+            <div id="gameOverScreen" class="game-over-screen">
+                <h2 id="gameOverTitle">Game Over!</h2>
+                <p id="finalScore">Your final score: $0</p>
+                <p id="gameOverMessage">Better luck next time!</p>
+                <button id="restartBtn" class="control-btn">Play Again</button>
+            </div>
+
+            <div id="winScreen" class="win-screen">
+                <h2>🎉 Congratulations! 🎉</h2>
+                <p>You've become a millionaire!</p>
+                <p>Final Score: $1,000,000</p>
+                <button id="playAgainBtn" class="control-btn">Play Again</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
